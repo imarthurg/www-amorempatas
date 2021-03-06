@@ -2,6 +2,14 @@
 
 }
 
+.logo_container {
+  width: 150px;
+}
+.logo_container img {
+  width: 100%;
+  height: auto;
+}
+
 .navbar {
 
 }
@@ -12,4 +20,8 @@
 
 .navbar ol > li {
   display: inline-block;
+}
+
+.navbar ol > li > a {
+  padding: 5px 10px;
 }

@@ -1,12 +1,15 @@
+import Image from 'next/image';
+import Logo from '../../assets/images/logo.png'
+
 import styles from '../../styles/Header.module.css';
 
 const navlinks = [
   {
-    label: 'Navlink',
+    label: 'Início',
     src: '#',
   },
   {
-    label: 'Navlink',
+    label: 'Quem somos',
     src: '#',
   },
   {
@@ -20,12 +23,12 @@ export default function Header() {
     <header className={styles.header}>
       <div>
         <div className={styles.logo_container}>
-          <img src='#' alt="Logo da Santo Pet" />
+          <img src={Logo} alt="Logo da Santo Pet" layout="fill" />
         </div>
         <nav className={styles.navbar}>
           <ol>
             {navlinks.map(({ label, src }) => (
-              <li>
+              <li key={label}>
                 <a src={src}>{label}</a>
               </li>
             ))}
