@@ -4,7 +4,12 @@
 
 .main_bg {
   width: 100%;
+  background-image: url("../assets/images/main_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   height: 100vh;
+  margin-top: -160px;
 }
 
 .main_bg img {

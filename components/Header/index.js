@@ -1,21 +1,17 @@
 import Link from 'next/link';
 import Logo from '../../assets/images/logo.png';
 
-import styles from '../../styles/Header.module.css';
+import styles from './styles.module.css';
 
 const navlinks = [
   {
     label: 'Início',
-    href: '#',
+    href: '/',
   },
   {
     label: 'Quem somos',
-    href: '#',
-  },
-  {
-    label: 'Navlink',
-    href: '#',
-  },
+    href: '/quem-somos',
+  }
 ];
 
 export default function Header() {
