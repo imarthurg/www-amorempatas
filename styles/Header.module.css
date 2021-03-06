@@ -1,0 +1,15 @@
+.header {
+
+}
+
+.navbar {
+
+}
+
+.navbar ol {
+  list-style-type: none;
+}
+
+.navbar ol > li {
+  display: inline-block;
+}
