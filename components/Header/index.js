@@ -20,7 +20,7 @@ export default function Header() {
     <header className={styles.header}>
       <div>
         <div className={styles.logo_container}>
-          <img src= alt="Logo da Santo Pet" />
+          <img src='#' alt="Logo da Santo Pet" />
         </div>
         <nav className={styles.navbar}>
           <ol>
