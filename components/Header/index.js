@@ -1,35 +1,37 @@
-import Image from 'next/image';
-import Logo from '../../assets/images/logo.png'
+import Link from 'next/link';
+import Logo from '../../assets/images/logo.png';
 
 import styles from '../../styles/Header.module.css';
 
 const navlinks = [
   {
     label: 'Início',
-    src: '#',
+    href: '#',
   },
   {
     label: 'Quem somos',
-    src: '#',
+    href: '#',
   },
   {
     label: 'Navlink',
-    src: '#',
+    href: '#',
   },
 ];
 
 export default function Header() {
   return (
     <header className={styles.header}>
-      <div>
+      <div className={styles.navbar}>
         <div className={styles.logo_container}>
           <img src={Logo} alt="Logo da Santo Pet" layout="fill" />
         </div>
-        <nav className={styles.navbar}>
+        <nav>
           <ol>
-            {navlinks.map(({ label, src }) => (
+            {navlinks.map(({ label, href }) => (
               <li key={label}>
-                <a src={src}>{label}</a>
+                <Link href={href}>
+                  <a>{label}</a>
+                </Link> 
               </li>
             ))}
           </ol>

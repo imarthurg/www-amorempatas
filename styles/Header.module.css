@@ -1,9 +1,12 @@
 .header {
-
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .logo_container {
-  width: 150px;
+  width: 125px;
 }
 .logo_container img {
   width: 100%;
@@ -11,7 +14,17 @@
 }
 
 .navbar {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 15px 50px;
+}
 
+.navbar nav {
+  flex-basis: 50%;
 }
 
 .navbar ol {
@@ -19,9 +32,32 @@
 }
 
 .navbar ol > li {
+  position: relative;
   display: inline-block;
 }
 
 .navbar ol > li > a {
-  padding: 5px 10px;
+  display: block;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+
+.navbar ol > li:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -15px;
+  width: 30px;
+  height: 21px;
+  background-image: url("../assets/images/dog_foot_icon.png");
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+}
+
+.navbar ol > li:hover:after {
+  opacity: 1;
 }
