@@ -4,7 +4,7 @@
 
 .main_bg {
   width: 100%;
-  background-image: url("../assets/images/main_bg_800x505.jpg");
+  background-image: url("../assets/images/main_bg_399x505.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -19,6 +19,12 @@
 @media screen and (min-width: 768px) {
   .main_bg {
     height: 100vh;
+    background-image: url("../assets/images/main_bg_800x505.jpg");
+  }
+}
+@media screen and (max-width: 1280px) {
+  .main_bg {
+    background-image: url("../assets/images/main_bg_1280x808.jpg");
   }
 }
 @media screen and (max-width: 1280px) {

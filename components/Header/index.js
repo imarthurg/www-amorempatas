@@ -11,7 +11,7 @@ const navlinks = [
   {
     label: 'Quem somos',
     href: '/quem-somos',
-  }
+  },
 ];
 
 export default function Header() {
@@ -19,7 +19,11 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.navbar}>
         <div className={styles.logo_container}>
-          <img src={Logo} alt="Logo da Santo Pet" layout="fill" />
+          <Link href="/">
+            <a>
+              <img src={Logo} alt="Logo da Santo Pet" layout="fill" />
+            </a>
+          </Link>
         </div>
         <nav>
           <ol>
@@ -27,7 +31,7 @@ export default function Header() {
               <li key={label}>
                 <Link href={href}>
                   <a>{label}</a>
-                </Link> 
+                </Link>
               </li>
             ))}
           </ol>

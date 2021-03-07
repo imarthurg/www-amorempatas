@@ -6,7 +6,7 @@
 }
 
 .logo_container {
-  width: 125px;
+  width: 50px;
 }
 .logo_container img {
   width: 100%;
@@ -44,7 +44,7 @@
 .navbar ol > li > a {
   display: block;
   padding: 10px 20px;
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 .navbar ol > li:after {
@@ -65,4 +65,14 @@
 
 .navbar ol > li:hover:after {
   opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .logo_container {
+    width: 125px;
+  }
+
+  .navbar ol > li > a {
+    font-size: 1.2rem;
+  }
 }
