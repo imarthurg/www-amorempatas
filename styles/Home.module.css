@@ -17,6 +17,11 @@
   margin-left: 180px;
 }
 
+.button_container {
+  text-align: center;
+  margin-top: 40px;
+}
+
 .main_bg {
   display: flex;
   align-items: center;

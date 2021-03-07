@@ -1,31 +1,42 @@
 import { useState } from 'react';
+import { emojify } from 'react-emojione';
+
 import AnimalCard from '../AnimalCard';
 import Button from '../../components/Button';
 
+import DogImage from '../../assets/images/dog.jpg';
 import styles from './styles.module.css';
 
 const animals = [
   {
-    name: 'Pedro1',
+    id: 1,
+    name: 'Pedro',
     type: 'dog',
+    imgSrc: DogImage,
   },
   {
-    name: 'Pluto2',
+    id: 2,
+    name: 'Pedro',
     type: 'dog',
+    imgSrc: DogImage,
   },
   {
-    name: 'Pluto3',
+    id: 3,
+    name: 'Pedro',
     type: 'dog',
+    imgSrc: DogImage,
   },
   {
-    name: 'Pluto4',
+    id: 4,
+    name: 'Pedro',
     type: 'dog',
+    imgSrc: DogImage,
   },
 ];
 
 const categories = [
-  { label: 'Cachorros', icon: '#' },
-  { label: 'Gatos', icon: '#' },
+  { label: 'Cachorros', emoji: ':dog:' },
+  { label: 'Gatos', emoji: ':cat:' },
 ];
 
 export default function AnimalList() {
@@ -37,19 +48,21 @@ export default function AnimalList() {
   return (
     <div className={styles.container}>
       <div className={styles.categories_container}>
-        {categories.map(({ label, icon }) => (
+        {categories.map(({ label, emoji }) => (
           <Button
             key={label}
             className={styles.categories_container_button}
             status={selectedCategory === label && 'primary'}
             handleClick={() => selectCategory(label)}
           >
-            {label}
+            {label}&nbsp;
+            {emojify(emoji)}
           </Button>
         ))}
       </div>
-      {animals.map(({ name }) => (
-        <AnimalCard key={name} name={name} />
+
+      {animals.map(({ name, imgSrc }) => (
+        <AnimalCard key={name} name={name} imgSrc={imgSrc} />
       ))}
     </div>
   );

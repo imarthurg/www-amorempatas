@@ -14,7 +14,11 @@ export default function Button({
   handleClick,
   className,
 }) {
-  const customStyles = classnames(className, styles.container, buttonStatuses[status]);
+  const customStyles = classnames(
+    className,
+    styles.container,
+    buttonStatuses[status],
+  );
 
   return (
     <button type={type} className={customStyles} onClick={handleClick}>
