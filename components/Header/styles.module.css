@@ -34,11 +34,11 @@
 .navbar ol > li {
   position: relative;
   display: inline-block;
-  margin-left: 30px;
+  margin-right: 30px;
 }
 
-.navbar ol > li:first-child {
-  margin-left: 0;
+.navbar ol > li:last-child {
+  margin-right: 0;
 }
 
 .navbar ol > li > a {
