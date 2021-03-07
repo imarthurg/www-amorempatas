@@ -4,17 +4,17 @@
 }
 
 .container h1 {
-  font-size: 5rem;
+  font-size: 2.5rem;
   color: #fff;
 }
 
 .container h2 {
-  font-size: 2.5rem;
+  font-size: 1.25rem;
   text-align: center;
 }
 
 .title {
-  margin-left: 180px;
+  margin-left: 10%;
 }
 
 .button_container {
@@ -34,9 +34,23 @@
   filter: grayscale(100%);
 }
 
+@media screen and (max-width: 768px) {
+  .main_bg {
+    align-items: flex-start;
+    padding-top: 10px
+  }
+}
 @media screen and (min-width: 768px) {
   .main_bg {
     background-image: url('../assets/images/main_bg_800x505.jpg');
+  }
+
+  .container h1 {
+    font-size: 5rem;
+  }
+
+  .container h2 {
+    font-size: 2.5rem;
   }
 }
 @media screen and (max-width: 1280px) {
