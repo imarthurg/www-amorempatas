@@ -4,11 +4,11 @@
 
 .main_bg {
   width: 100%;
-  background-image: url("../assets/images/main_bg.jpg");
+  background-image: url("../assets/images/main_bg_800x505.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 75vh;
   margin-top: -160px;
 }
 
@@ -16,8 +16,24 @@
   width: 100%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .main_bg {
-    height: 75vh;
+    height: 100vh;
   }
 }
+@media screen and (max-width: 1280px) {
+  .main_bg {
+    background-image: url("../assets/images/main_bg_1280x808.jpg");
+  }
+}
+@media screen and (max-width: 1920px) {
+  .main_bg {
+    background-image: url("../assets/images/main_bg_1920x1212.jpg");
+  }
+}
+@media screen and (min-width: 1921px) {
+  .main_bg {
+    background-image: url("../assets/images/main_bg.jpg");
+  }
+}
+
