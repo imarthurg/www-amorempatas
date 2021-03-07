@@ -18,9 +18,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  padding: 15px 150px;
-  border-bottom: 1px solid #C3C3C3;
-  ;
+  border-bottom: 1px solid #c3c3c3;
 }
 
 .navbar ol {
@@ -30,11 +28,7 @@
 .navbar ol > li {
   position: relative;
   display: inline-block;
-  margin-right: 30px;
-}
-
-.navbar ol > li:last-child {
-  margin-right: 0;
+  margin: 5px 15px;
 }
 
 .navbar ol > li > a {
@@ -50,5 +44,11 @@
 
   .navbar ol > li > a {
     font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    padding: 15px 75px;
   }
 }
