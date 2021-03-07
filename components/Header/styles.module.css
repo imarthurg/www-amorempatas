@@ -1,31 +1,26 @@
 .header {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
 }
 
 .logo_container {
-  width: 50px;
+  height: 100%;
 }
 .logo_container img {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
 }
 
 .navbar {
   width: 100%;
+  height: 100px;
   background-color: #fff;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  padding: 15px 30px;
-}
-
-.navbar nav {
-  flex-basis: 50%;
-  flex-grow: 0.8;
+  padding: 15px 150px;
+  border-bottom: 1px solid #C3C3C3;
+  ;
 }
 
 .navbar ol {
@@ -42,33 +37,6 @@
   margin-right: 0;
 }
 
-.link_active::after {
-  opacity: 1 !important;
-}
-
-.navbar ol > li:hover::after {
-  opacity: 0.5;
-}
-
-.navbar ol > li::after {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  margin-top: -10px;
-  width: 20px;
-  height: 20px;
-  opacity: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url('../../assets/images/paw.png');
-  transition: opacity 0.3s ease;
-  -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
-  -moz-transition: opacity 0.3s ease;
-}
-
 .navbar ol > li > a {
   display: inline-block;
   padding: 10px 20px;
@@ -78,14 +46,6 @@
 @media screen and (min-width: 600px) {
   .logo_container {
     width: 125px;
-  }
-
-  .navbar ol > li::after {
-    opacity: 0;
-    left: 50%;
-    top: 100%;
-    margin-left: -10px;
-    margin-top: 0;
   }
 
   .navbar ol > li > a {

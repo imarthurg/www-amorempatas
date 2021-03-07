@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import Logo from '../../assets/images/logo.png';
+import NavLink from '../NavLink';
 
 import styles from './styles.module.css';
 
@@ -17,9 +18,9 @@ const navlinks = [
 ];
 
 export default function Header() {
-  const { asPath } = useRouter(); 
+  const { asPath } = useRouter();
 
-  const linkActiveClass = (href) => (asPath && asPath === href && styles.link_active) || null;
+  const isActiveLink = (href) => asPath && asPath === href;
 
   return (
     <header className={styles.header}>
@@ -34,10 +35,15 @@ export default function Header() {
         <nav>
           <ol>
             {navlinks.map(({ label, href }) => (
-              <li key={label} className={linkActiveClass(href)}>
-                <Link href={href}>
-                  <a>{label}</a>
-                </Link>
+              <li key={label}>
+                <NavLink
+                  href={href}
+                  rounded
+                  outlined
+                  active={isActiveLink(href)}
+                >
+                  {label}
+                </NavLink>
               </li>
             ))}
           </ol>

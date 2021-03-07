@@ -1,0 +1,13 @@
+.categories_container {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.categories_container_button:first-child {
+  margin-left: 0;
+}
+
+.categories_container_button {
+  margin-left: 24px;
+}
