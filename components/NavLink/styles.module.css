@@ -3,6 +3,10 @@
   font-size: 0.8rem !important;
 }
 
+.link:hover:not(.active) {
+  background-color: #f4f4f4;
+}
+
 .rounded {
   border: 3px solid #000;
   border-radius: 10px;

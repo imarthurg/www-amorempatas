@@ -9,6 +9,10 @@
   font-size: 1.2rem;
 }
 
+.container:hover:not(.primary) {
+  background-color: #f4f4f4;
+}
+
 .primary {
   border-color: #000;
   background-color: #000;

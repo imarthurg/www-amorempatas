@@ -86,8 +86,8 @@ export default function AnimalList() {
             status={selectedCategory === value && 'primary'}
             handleClick={() => selectCategory(value)}
           >
-            {label}&nbsp;
-            {emoji && emojify(emoji)}
+            {label}
+            {emoji && <>&nbsp;{emojify(emoji)}</>}
           </Button>
         ))}
       </div>

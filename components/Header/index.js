@@ -11,10 +11,6 @@ const navlinks = [
     label: 'Início',
     href: '/',
   },
-  {
-    label: 'Quem somos',
-    href: '/quem-somos',
-  },
 ];
 
 export default function Header() {
@@ -29,6 +25,7 @@ export default function Header() {
           <Link href="/">
             <a>
               <img src={Logo} alt="Logo da Santo Pet" layout="fill" />
+              <p>Amor em patas</p>
             </a>
           </Link>
         </div>
