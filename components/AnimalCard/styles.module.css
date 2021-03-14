@@ -1,0 +1,41 @@
+.container {
+  display: inline-block;
+  width: 250px;
+  margin: 15px;
+  vertical-align: top;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.container:first-child {
+  margin-right: 0;
+}
+
+.image_container {
+  border-radius: 30px;
+  height: 250px;
+  overflow: hidden;
+  border: 3px solid transparent;
+}
+
+.image_container img {
+  width: 100%;
+  height: auto;
+}
+
+.body_container {
+  height: 100px;
+  padding: 10px 0;
+  text-align: left;
+}
+
+.name {
+  font-size: 1.125rem;
+  font-weight: 900;
+}
+
+.description { 
+  color: #696969;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}

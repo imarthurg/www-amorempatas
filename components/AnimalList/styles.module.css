@@ -1,0 +1,14 @@
+.container {
+  text-align: center;
+}
+
+.categories_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.categories_container_button {
+  margin: 12px;
+}

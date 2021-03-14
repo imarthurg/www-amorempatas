@@ -1,32 +1,46 @@
-import styles from '../../styles/Header.module.css';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+
+import Logo from '../../assets/images/logo.png';
+import NavLink from '../NavLink';
+
+import styles from './styles.module.css';
 
 const navlinks = [
   {
-    label: 'Navlink',
-    src: '#',
-  },
-  {
-    label: 'Navlink',
-    src: '#',
-  },
-  {
-    label: 'Navlink',
-    src: '#',
+    label: 'Início',
+    href: '/',
   },
 ];
 
 export default function Header() {
+  const { asPath } = useRouter();
+
+  const isActiveLink = (href) => asPath && asPath === href;
+
   return (
     <header className={styles.header}>
-      <div>
+      <div className={styles.navbar}>
         <div className={styles.logo_container}>
-          <img src='#' alt="Logo da Santo Pet" />
+          <Link href="/">
+            <a>
+              <img src={Logo} alt="Logo da Santo Pet" layout="fill" />
+              <p>Amor em patas</p>
+            </a>
+          </Link>
         </div>
-        <nav className={styles.navbar}>
+        <nav>
           <ol>
-            {navlinks.map(({ label, src }) => (
-              <li>
-                <a src={src}>{label}</a>
+            {navlinks.map(({ label, href }) => (
+              <li key={label}>
+                <NavLink
+                  href={href}
+                  rounded
+                  outlined
+                  active={isActiveLink(href)}
+                >
+                  {label}
+                </NavLink>
               </li>
             ))}
           </ol>

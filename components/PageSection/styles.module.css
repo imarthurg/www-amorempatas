@@ -1,0 +1,13 @@
+.container {
+  padding: 20px 50px;
+}
+
+.alou {
+  background-color: red;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 60px 150px;
+  }
+}
